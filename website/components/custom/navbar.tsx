@@ -1,6 +1,5 @@
-"use client";
-import React, { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
