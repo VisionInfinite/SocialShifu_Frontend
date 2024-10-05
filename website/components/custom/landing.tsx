@@ -3,20 +3,19 @@ import Circlers from "@/components/custom/circle";
 import { Button } from "@/components/ui/button";
 export default function Landing() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto ">
       <Navbar />
-      <div className="flex flex-col w-full justify-center items-center  bg-white text-black">
-        <Circlers />
-        <p className="absolute z-50 mt-[-14rem] text-5xl font-semibold leading-relaxed">
-          Create beautiful video with <br />
-          Artificial Intelligence
+      <div className="flex flex-col w-[100%] justify-center items-center h-[60vh]">
+        {/* <Circlers /> */}
+        <p className="text-5xl  text-center font-semibold mb-5">
+          Videos? Our AI Does That!
         </p>
-        <p className="absolute z-50 mt-[3rem] text-gray-600/50">
+        <p className=" text-gray-600/50">
           Exclusively Open !! Join the waitlist below
         </p>
-        <div className="absolute justify-center items-center px-2 flex mt-[14rem] z-50 w-[40vw] h-[10vh] bg-white rounded-xl drop-shadow-xl">
+        <div className="flex flex-col gap-3 items-center px-2 w-[50vw]rounded-xl ">
           <input
-            className="focus:outline-none relative z-10 h-full w-full rounded-xl drop-shadow-xl"
+            className="focus:outline-none relative z-10 h-14 p-8 w-full rounded-md "
             type="text"
             placeholder="Enter Your Email to reserve your spot"
           ></input>
