@@ -1,4 +1,4 @@
-import Navbar from "@/components/custom/Navbar";
+import Navbar from "./Navbar";
 import "@/components/custom/css/landing.sample.css";
 import { Hero } from "./Hero";
 import { NeonGradientCardDemo } from "./NeonGradientDemo";
