@@ -1,9 +1,8 @@
-import Navbar from "@/components/custom/Navbar";
-import { Button } from "@/components/ui/button";
+import Navbar from "@/components/custom/navbar";
 import "@/components/custom/css/landing.sample.css";
-import { AnimatedSubscribeButtonDemo } from "./AnimatedSubscribeButtonDemo";
 import { ParticlesDemo } from "./ParticlesDemo";
 import { NeonGradientCardDemo } from "./NeonGradientDemo";
+import VideoShowcase from "./VideoShowcase";
 export default function Landing() {
   return (
     <div className="mx-auto h-[100vh]">
@@ -13,6 +12,7 @@ export default function Landing() {
         <center>
           <NeonGradientCardDemo />
         </center>
+        <VideoShowcase />
       </div>
     </div>
   );
