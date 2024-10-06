@@ -9,6 +9,6 @@ export function NeonGradientCardDemo() {
         loop
         className="w-full h-full"
       ></video> */}
-<iframe width="100%" height="510" src="https://www.youtube.com/embed/eWtaNXK0s9k?autoplay=1" title="Like That - Flow Edit/AMV | 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </NeonGradientCard>
+<iframe width="100%" height="510" src="https://www.youtube.com/embed/eWtaNXK0s9k?autoplay=1" title="Like That - Flow Edit/AMV | 4K"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>    </NeonGradientCard>
   );
 }
