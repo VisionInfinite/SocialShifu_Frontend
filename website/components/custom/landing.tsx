@@ -1,13 +1,13 @@
-import Navbar from "@/components/custom/navbar";
+import Navbar from "@/components/custom/Navbar";
 import "@/components/custom/css/landing.sample.css";
-import { ParticlesDemo } from "./ParticlesDemo";
+import { Hero } from "./Hero";
 import { NeonGradientCardDemo } from "./NeonGradientDemo";
 import VideoShowcase from "./VideoShowcase";
 export default function Landing() {
   return (
     <div className="mx-auto h-[100vh]">
       <Navbar />
-      <ParticlesDemo />
+      <Hero />
       <div className="mt-10">
         <center>
           <NeonGradientCardDemo />

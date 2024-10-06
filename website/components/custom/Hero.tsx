@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Particles from "@/components/ui/particles";
 import { AnimatedSubscribeButtonDemo } from "./AnimatedSubscribeButtonDemo";
 
-export function ParticlesDemo() {
+export function Hero() {
   const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
