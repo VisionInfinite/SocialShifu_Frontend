@@ -1,5 +1,5 @@
 import ShinyButton from "@/components/ui/shiny-button";
 
-export function ShinyButtonDemo() {
+export function FindPlan() {
   return <ShinyButton>Find Your Plan</ShinyButton>;
 }

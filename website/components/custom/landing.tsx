@@ -1,20 +1,23 @@
-
 import "@/components/custom/css/landing.sample.css";
 import { Hero } from "./Hero";
-import { NeonGradientCardDemo } from "./NeonGradientDemo";
-import VideoShowcase from "./VideoShowcase";
+import { HeroVideoShowcase } from "./HeroVideoShowcase";
+import VideoWork from "./VideoWork";
 import Navigation from "./Navigation";
+import FooterBranding from "./FooterBranding";
 export default function Landing() {
   return (
     <div className="mx-auto h-[100vh]">
       <Navigation />
       <Hero />
-      <div className="mt-10">
+      <div className="lg:mt-10">
         <center>
-          <NeonGradientCardDemo />
+          <HeroVideoShowcase />
         </center>
-        <VideoShowcase />
+        <div className="mt-20">
+          <VideoWork />
+        </div>
       </div>
+      <FooterBranding />
     </div>
   );
 }
