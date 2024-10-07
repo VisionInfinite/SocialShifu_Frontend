@@ -13,7 +13,7 @@ export function HeroVideoShowcase() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe> */}
       {/* OpusPro Video Below */}
-      <video src="/assets/videos/promo.mp4" className="rounded-xl w-full h-full" autoPlay loop muted ></video>
+      <video src="/promo.mp4" className="rounded-xl w-full h-full" autoPlay loop muted ></video>
     </NeonGradientCard>
   );
 }
