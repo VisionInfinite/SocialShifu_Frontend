@@ -4,6 +4,7 @@ import { HeroVideoShowcase } from "./HeroVideoShowcase";
 import VideoWork from "./VideoWork";
 import Navigation from "./Navigation";
 import FooterBranding from "./FooterBranding";
+import MarqueeSlider from "./SliderSponsor";
 export default function LandingPage() {
   return (
     <div className="mx-auto h-[100vh]">
@@ -17,6 +18,7 @@ export default function LandingPage() {
           <VideoWork />
         </div>
       </div>
+      <MarqueeSlider/>
       <FooterBranding />
     </div>
   );

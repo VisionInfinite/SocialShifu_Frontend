@@ -3,7 +3,7 @@ import React from "react";
 const FooterBranding = () => {
   return (
     <div className="w-full text-center">
-      <h1 className="w-full text-[12rem] pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center font-semibold backdrop-blur-sm">
+      <h1 className="w-full text-[3rem]  md:text-[12rem] pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center font-semibold backdrop-blur-sm">
         SOCIALSHIFU
       </h1>
       <footer >
@@ -14,8 +14,8 @@ const FooterBranding = () => {
                 className="text-gray-400 transition hover:text-gray-400/75"
                 href="#"
               >
-                {" "}
-                About{" "}
+                
+                About
               </a>
             </li>
 
@@ -24,8 +24,8 @@ const FooterBranding = () => {
                 className="text-gray-400 transition hover:text-gray-400/75"
                 href="#"
               >
-                {" "}
-                Careers{" "}
+                
+                Careers
               </a>
             </li>
 
@@ -34,8 +34,8 @@ const FooterBranding = () => {
                 className="text-gray-400 transition hover:text-gray-400/75"
                 href="#"
               >
-                {" "}
-                History{" "}
+                
+                History
               </a>
             </li>
 
@@ -44,8 +44,8 @@ const FooterBranding = () => {
                 className="text-gray-400 transition hover:text-gray-400/75"
                 href="#"
               >
-                {" "}
-                Services{" "}
+                
+                Services
               </a>
             </li>
 
@@ -54,8 +54,8 @@ const FooterBranding = () => {
                 className="text-gray-400 transition hover:text-gray-400/75"
                 href="#"
               >
-                {" "}
-                Projects{" "}
+                
+                Projects
               </a>
             </li>
 
@@ -64,8 +64,8 @@ const FooterBranding = () => {
                 className="text-gray-400 transition hover:text-gray-400/75"
                 href="#"
               >
-                {" "}
-                Blog{" "}
+                
+                Blog
               </a>
             </li>
           </ul>
