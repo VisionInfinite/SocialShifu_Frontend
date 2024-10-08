@@ -10,14 +10,14 @@ export function AnimatedSubscribeButtonDemo() {
       subscribeStatus={false}
       initialText={
         <span className="group inline-flex items-center">
-          Join{" "}
+          Join
           <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       }
       changeText={
         <span className="group inline-flex items-center">
           <CheckIcon className="mr-2 size-4" />
-          Voilaa!{" "}
+          Voilaa!
         </span>
       }
     />
