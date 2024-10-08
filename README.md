@@ -1,5 +1,5 @@
 Documentation: https://vision-infinity.gitbook.io/socialshifu
-
+Deployment: https://socialshifu.vercel.app/
 
 
 Project Title
