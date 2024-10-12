@@ -1,5 +1,4 @@
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
-
 import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button";
 
 export function AnimatedSubscribeButtonDemo() {

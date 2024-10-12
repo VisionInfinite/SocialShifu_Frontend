@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+
 interface AnimatedSubscribeButtonProps {
   buttonColor: string;
   buttonTextColor?: string;
@@ -22,15 +23,19 @@ export const AnimatedSubscribeButton: React.FC<
 }) => {
   const [isSubscribed, setIsSubscribed] = useState<boolean>(subscribeStatus);
 
+
   return (
     <AnimatePresence mode="wait">
       {isSubscribed ? (
         <motion.button
           className="relative flex w-[200px] items-center justify-center overflow-hidden rounded-md bg-white p-[10px] outline outline-1 outline-black"
-          onClick={() => setIsSubscribed(false)}
+          onClick={() => {
+            setIsSubscribed(false);
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+            
         >
           <motion.span
             key="action"
