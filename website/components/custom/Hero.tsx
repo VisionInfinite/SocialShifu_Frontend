@@ -10,7 +10,34 @@ export function Hero() {
   useEffect(() => {
     setColor("#ffffff"); 
   }, []);
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+  const body = { email: email }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('Sending...');
 
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus('Email sent successfully!');
+        setEmail('');
+      } else {
+        setStatus(`Failed to send email: ${result.error}`);
+      }
+    } catch (error) {
+      setStatus('An error occurred. Please try again.');
+    }
+  };
   return (
     <div className="relative flex flex-col items-center justify-center overflow-hidden bg-black px-4 py-16 md:py-20 lg:py-24 lg:mt-16 mt-16">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center text-3xl font-semibold leading-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mb-4 md:mb-6 py-2">
