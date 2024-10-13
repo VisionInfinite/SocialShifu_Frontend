@@ -10,7 +10,7 @@ export default function VideoWork() {
       VIDEO_IDS.map((i) => (
         <div
           key={i}
-          className="w-[40vw] lg:w-[18vw] aspect-[9/16] rounded-xl overflow-hidden shadow-xl mx-9"
+          className="w-[80vw] sm:w-[60vw] md:w-[45vw] lg:w-[18vw] aspect-[9/16] rounded-xl overflow-hidden shadow-xl mx-2 sm:mx-3 md:mx-4"
         >
           <iframe
             width="100%"
@@ -28,7 +28,7 @@ export default function VideoWork() {
   );
 
   return (
-    <div className="flex justify-center items-center h-screen bg-transparent">
+    <div className="bg-transparent py-8 sm:py-12 md:py-16 lg:py-20">
       <Marquee
         className="bg-transparent flex items-center"
         pauseOnHover

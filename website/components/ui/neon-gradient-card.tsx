@@ -81,27 +81,27 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
-  useEffect(() => {
-    const updateDimensions = () => {
-      if (containerRef.current) {
-        const { offsetWidth, offsetHeight } = containerRef.current;
-        setDimensions({ width: offsetWidth, height: offsetHeight });
-      }
-    };
-
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
-  }, []);
-
-  useEffect(() => {
+  const updateDimensions = () => {
     if (containerRef.current) {
       const { offsetWidth, offsetHeight } = containerRef.current;
       setDimensions({ width: offsetWidth, height: offsetHeight });
     }
+  };
+
+  useEffect(() => {
+    updateDimensions();
+    const debouncedUpdateDimensions = debounce(updateDimensions, 250);
+    window.addEventListener("resize", debouncedUpdateDimensions);
+    window.addEventListener("orientationchange", debouncedUpdateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", debouncedUpdateDimensions);
+      window.removeEventListener("orientationchange", debouncedUpdateDimensions);
+    };
+  }, []);
+
+  useEffect(() => {
+    updateDimensions();
   }, [children]);
 
   return (
@@ -130,7 +130,7 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
     >
       <div
         className={cn(
-          "relative size-full min-h-[inherit] rounded-[var(--card-content-radius)] bg-transparent -p-2",
+          "relative size-full min-h-[inherit] rounded-[var(--card-content-radius)] bg-transparent",
           "before:absolute before:-left-[var(--border-size)] before:-top-[var(--border-size)] before:-z-10 before:block",
           "before:h-[var(--pseudo-element-height)] before:w-[var(--pseudo-element-width)] before:rounded-[var(--border-radius)] before:content-['']",
           "before:animate-background-position-spin",
@@ -146,5 +146,18 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
     </div>
   );
 };
+
+// Add this utility function at the end of the file
+function debounce(func: Function, wait: number) {
+  let timeout: NodeJS.Timeout;
+  return function executedFunction(...args: any[]) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
 
 export { NeonGradientCard };

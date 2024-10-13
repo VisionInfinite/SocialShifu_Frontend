@@ -12,11 +12,11 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="relative flex h-[50vh] mt-20 lg:mt-0 lg:h-[100vh] pt-10 w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-black md:shadow-xl lg:m-0">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center text-4xl md:text-6xl lg:text-7xl font-semibold leading-none text-transparent max-w-7xl py-5">
-        Social Shifu is the new way <br /> to generate AI videos.
+    <div className="relative flex flex-col items-center justify-center overflow-hidden bg-black px-4 py-16 md:py-20 lg:py-24 lg:mt-16 mt-16">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-gray-300/80 bg-clip-text text-center text-3xl font-semibold leading-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl mb-4 md:mb-6 py-2">
+        Social Shifu is the new way <br className="hidden sm:inline" /> to generate AI videos.
       </span>
-      <h2 className="text-gray-400 max-w-sm text-sm mx-auto text-center">
+      <h2 className="text-gray-400 max-w-xs sm:max-w-sm md:max-w-md text-sm sm:text-base text-center mb-8 md:mb-10">
         SocialSifu Does all the video automation you need, from generating to
         posting. Everything by us, just relax.
       </h2>
@@ -28,14 +28,15 @@ export function Hero() {
         color={color}
         refresh
       />
-      <div className="relative flex flex-row gap-3 items-center px-2 mx-5 mb-5 lg:w-[50vw] mt-10 text-white bg-[#1a1a1a] font-semibold rounded-xl ">
+      <div className="relative flex flex-col w-full max-w-[90%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl gap-3 items-center px-3 sm:px-4 py-3 text-white bg-[#1a1a1a] font-semibold rounded-xl">
         <input
-          className="focus:outline-none py-4 px-8 w-full rounded-md text-white bg-[#1a1a1a]"
+          className="focus:outline-none py-2 px-3 w-full text-sm rounded-md text-white bg-[#2a2a2a]"
           type="email"
           placeholder="Enter Your Email"
-        ></input>
-
-        <AnimatedSubscribeButtonDemo />
+        />
+        <div className=" mt-2 mx-auto">
+          <AnimatedSubscribeButtonDemo />
+        </div>
       </div>
     </div>
   );
